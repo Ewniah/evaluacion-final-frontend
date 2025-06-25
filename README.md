@@ -14,7 +14,7 @@ El objetivo de esta aplicación es resolver la problemática de una empresa que 
 
 ## ✅ Requisitos Cumplidos
 
-Este proyecto implementa todas las funcionalidades solicitadas en la pauta de evaluación:
+Este proyecto implementa todas las funcionalidades solicitadas:
 
 #### 1. Producto: CRUD y Almacenamiento en Arreglos
 
@@ -63,7 +63,7 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 2.  **Navega a la carpeta del proyecto:**
     ```bash
-    cd nombre-de-la-carpeta-del-proyecto
+    cd mi-evaluacion
     ```
 
 3.  **Instala las dependencias necesarias:**
