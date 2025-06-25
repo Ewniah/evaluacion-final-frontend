@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Evaluación III: Desarrollo de Aplicación Web SPA (35%)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web de página única (SPA) desarrollada con React para la asignatura de **Programación Front End**. El proyecto cumple con los objetivos y criterios de la Unidad III, enfocada en el desarrollo con frameworks JavaScript y la manipulación de arreglos.
 
-## Available Scripts
+| Asignatura      | Programación Front End                                     |
+|-----------------|------------------------------------------------------------|
+| Docente         | [cite_start]Yaleni Gómez Peña                                 |
+| Programa        | [cite_start]Ingeniería en Informática / Analista Programador  |
+| Integrantes     | Bryan Alegría Pastén                                  |
 
-In the project directory, you can run:
+## Descripción del Proyecto
 
-### `npm start`
+[cite_start]El objetivo de esta aplicación es resolver la problemática de una empresa que necesita calcular la renta líquida de sus colaboradores. [cite_start]Para esto, se desarrolló una interfaz que permite realizar las operaciones CRUD (Crear, Leer, Modificar y Eliminar) sobre los datos de los trabajadores, los cuales se almacenan en arreglos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[cite_start]La aplicación fue construida como un trabajo en dupla, siguiendo las instrucciones y la pauta de evaluación proporcionada.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✅ Requisitos Cumplidos
 
-### `npm test`
+Este proyecto implementa todas las funcionalidades solicitadas en la pauta de evaluación:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### **1. [cite_start]Producto: CRUD y Almacenamiento en Arreglos (Criterio 3.1.3)** 
 
-### `npm run build`
+* **Ingresar, Modificar, Eliminar y Listar:** Se implementó un CRUD completo para gestionar los datos de los trabajadores.
+* [cite_start]**Almacenamiento en Arreglos:** Toda la información de los trabajadores se persiste en la memoria de la aplicación utilizando arreglos de JavaScript.
+* **Datos del Trabajador:** El formulario maneja los siguientes campos:
+    * [cite_start]Nombre 
+    * Apellido 
+    * [cite_start]Renta Bruta 
+    * [cite_start]Fecha de ingreso 
+* **Cálculos Automatizados:** La aplicación calcula y muestra automáticamente:
+    * [cite_start]El 7% de Salud sobre la renta bruta.
+    * [cite_start]El 13% de AFP sobre la renta bruta.
+    * La Renta Líquida final (Renta Bruta - Descuentos).
+    * [cite_start]La Antigüedad laboral del trabajador.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### **2. [cite_start]Requisitos del Formulario y Código (Criterio 3.1.2)** 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Validaciones:** El formulario valida que no se ingresen valores nulos y los errores se muestran por pantalla al usuario. También se valida el formato de los datos (ej. solo letras para nombres).
+* **Código Claro y Legible:**
+    * Se utilizaron nombres descriptivos para variables y funciones.
+    * [cite_start]La lógica se separó en funciones claras y concisas.
+    * [cite_start]La aplicación está estructurada en componentes de React para una mejor organización y reutilización del código.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### **3. [cite_start]Desarrollo con Framework (Criterio 3.1.1)** 
 
-### `npm run eject`
+* [cite_start]La aplicación es una **SPA (Single Page Application)** desarrollada íntegramente con el framework **React.js**, cumpliendo con el aprendizaje esperado de la unidad.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Tecnologías Utilizadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React.js:** Framework de JavaScript para la construcción de la interfaz.
+- **JavaScript (ES6+):** Lenguaje para la lógica de la aplicación.
+- **CSS3:** Para los estilos, diseño responsivo y layout de dos columnas.
+- **HTML5:** Para la estructura semántica.
+- **Git & GitHub:** Para el control de versiones.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Instalación y Ejecución
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
-## Learn More
+1.  **Clona el repositorio:**
+    *(Recuerda reemplazar la URL por la de tu propio repositorio en GitHub)*
+    ```bash
+    git clone [https://URL-DE-TU-REPOSITORIO.git](https://URL-DE-TU-REPOSITORIO.git)
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2.  **Navega a la carpeta del proyecto:**
+    ```bash
+    cd nombre-de-la-carpeta-del-proyecto
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3.  **Instala las dependencias necesarias:**
+    ```bash
+    npm install
+    ```
 
-### Code Splitting
+4.  **Inicia la aplicación:**
+    ```bash
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+La aplicación se ejecutará en modo de desarrollo y se abrirá en `http://localhost:3000`.

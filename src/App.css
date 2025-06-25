@@ -1,38 +1,191 @@
+:root {
+  --color-primario: #fd6a3e;
+  --color-secundario: #6c757d;
+  --color-exito: #198754;
+  --color-peligro: #dc3545;
+  --color-advertencia: #ffc107;
+  --color-fondo: #FAF9F6; 
+  --color-superficie: rgba(255, 255, 255, 0.95);
+  --color-texto-principal: #212529;
+  --color-texto-secundario: #6c757d;
+  --color-borde: #dee2e6;
+}
+
+body {
+  background-image: url('./assets/Fondo.jpg'); /* Se agrega un fondo porque el blanco es muy feo */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* para que el fondo no se mueva con el scroll */
+  background-repeat: no-repeat;
+  
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-texto-principal);
+} /* Todas estas fuentes las usé en otras aplicaciones así que ya estoy acostumbrado a utilizarlas y se ven bonitas */
+
+
 .App {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* el header de arriba */
+header {
+  background-color: var(--color-primario);
+  color: white; /* color directo en vez de variable */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+    font-size: 1.8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* para las columnas del layout */
+.layout-container {
+  display: flex;
+  gap: 30px; 
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.columna-izquierda {
+  flex: 1;
+  min-width: 380px;
+}
+
+.columna-derecha {
+    min-width: 450px;
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-container, .lista-container {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 25px;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.lista-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.formulario-container h2, 
+.lista-container h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #212529;
+  margin-bottom: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group { 
+    margin-bottom: 18px;
 }
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--color-texto-secundario);
+}
+.input-group input, .buscador input {
+  width: 100%;
+  font-size: 1em;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-borde);
+}
+.input-group input:focus, .buscador input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(253, 106, 62, 0.25);
+}
+
+.error-msg {
+  font-size: 0.85em;
+  margin-top: 5px;
+  color: var(--color-peligro);
+  margin-bottom: 0;
+}
+
+.botones-form { 
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-principal, .btn-secundario {
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-principal {
+    background-color: var(--color-exito);
+    color: white;
+    flex-grow: 1;
+}
+
+.btn-principal:hover {
+    background-color: #157347; 
+}
+.btn-secundario { background-color: var(--color-secundario); color: white; }
+.btn-secundario:hover { filter: brightness(1.1); }
+
+.buscador { 
+    margin-bottom: 20px; 
+}
+
+.tabla-responsive { 
+    overflow-y: auto;
+    flex-grow: 1;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--color-borde);
+  white-space: nowrap;
+}
+thead th {
+  background-color: var(--color-fondo);
+  position: sticky;
+  top: 0;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+}
+tbody tr:hover { 
+    background-color: rgba(253, 106, 62, 0.08);
+}
+
+.acciones { display: flex; align-items: center; gap: 8px; }
+.btn-accion {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+}
+.btn-accion:hover { transform: scale(1.05); filter: brightness(1.1); }
+.btn-editar { background-color: var(--color-advertencia); color: var(--color-texto-principal); }
+.btn-eliminar { background-color: var(--color-peligro); }
