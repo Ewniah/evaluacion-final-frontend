@@ -56,7 +56,7 @@ Este proyecto implementa todas las funcionalidades solicitadas:
 Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 1.  **Clona el repositorio:**
-    *(Recuerda reemplazar la URL por la de tu propio repositorio en GitHub)*
+
     ```bash
     git clone [https://github.com/Ewniah/evaluacion-final-frontend](https://github.com/Ewniah/evaluacion-final-frontend)
     ```
